@@ -1,6 +1,7 @@
 <?php
 //application/views/templates/header.php
 ?>
+
 <html>
         <head>
                 <title>CodeIgniter Tutorial</title>
