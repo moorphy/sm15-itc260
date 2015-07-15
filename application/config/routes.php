@@ -52,8 +52,12 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //routes for news controller
+$route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
+
+//routes for RSS controller
+$route['rss'] = 'rss';
 
 //routes for static pages
 $route['(:any)'] = 'pages/view/$1';
