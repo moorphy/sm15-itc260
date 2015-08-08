@@ -2,9 +2,17 @@
 //Rss.php
 class Rss extends CI_Controller {
 
+        public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('rss_model'); //LOAD MODEL
+        $this->config->set_item('banner', 'RSS Feed'); //LOAD BANNER
+        $this->config->set_item('title', 'RSS Feed'); //LOAD TITLE
+            
+    } //END CONSTRUCTOR    
         public function index()
         {
-            $request = "http://rss.news.yahoo.com/rss/software";
+            $request = "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss";
             $response = file_get_contents($request);
             $xml = simplexml_load_string($response);
             print '<h1>' . $xml->channel->title . '</h1>';
@@ -14,5 +22,6 @@ class Rss extends CI_Controller {
                 echo '<p>' . $story->description . '</p><br /><br />';
             }
         }//end index
+    
  
 }//end Rss
