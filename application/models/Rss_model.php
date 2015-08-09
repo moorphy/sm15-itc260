@@ -5,7 +5,7 @@ class Rss_model extends CI_Model {
       $data = [];
       //returns a string
         
-      $rawFile = file_get_contents('https://www.google.com/search?q=google+rss&obatman&tbm=nws');
+      $rawFile = file_get_contents('https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=game+of+thrones&output=rss');
       //must be used to parse string to xml object
       $xml = simplexml_load_string($rawFile);
         
