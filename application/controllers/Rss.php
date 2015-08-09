@@ -12,7 +12,7 @@ class Rss extends CI_Controller {
     } //END CONSTRUCTOR    
         public function index()
         {
-            $request = "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss";
+            $request = "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&q=game+of+thrones&output=rss";
             $response = file_get_contents($request);
             $xml = simplexml_load_string($response);
             print '<h1>' . $xml->channel->title . '</h1>';
@@ -22,6 +22,7 @@ class Rss extends CI_Controller {
                 echo '<p>' . $story->description . '</p><br /><br />';
             }
         }//end index
+	
     
  
 }//end Rss
