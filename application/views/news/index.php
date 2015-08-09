@@ -11,7 +11,7 @@ $this->load->view($this->config->item('theme') . 'header');
 
         <h3><?php echo $news_item['title'] ?></h3>
         <div class="main">
-                <?php echo $news_item['text'] ?>
+        <?php echo $news_item['text'] ?>
         </div>
         <p><a href="<?php echo $news_item['slug'] ?>">View article</a></p>
 
